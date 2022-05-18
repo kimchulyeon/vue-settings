@@ -5,10 +5,8 @@
     "baseUrl": ".",
     "jsx": "preserve",
     "moduleResolution": "node",
+    
     "paths": {
-      "~/*": [
-        "./*"
-      ],
       "@/*": [
         "./src/*"
       ]

@@ -1,17 +1,18 @@
 <template>
 	<div>
-		hello
-		<Container />
+		<AppHeader />
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-import Container from "@/components/Container.vue";
+import AppHeader from "@/components/Header/AppHeader.vue";
 
 export default {
-	created() {
-		console.log("hi");
+	components: {
+		AppHeader,
 	},
-	components: { Container },
 };
 </script>
+
+<style lang="scss" scoped></style>
