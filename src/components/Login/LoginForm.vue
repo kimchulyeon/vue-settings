@@ -34,7 +34,9 @@ export default {
 				password: this.password,
 			};
 			try {
-				await loginUser(userdata);
+				const { data } = await loginUser(userdata);
+				this.$store.commit("setToken", data.token);
+				this.$store.commit("setUsername", data.user.username);
 				this.$router.push("/main");
 			} catch (error) {
 				error.response.data ? (this.logMessage = "아이디 또는 비밀번호가 일치하지 않습니다.") : "";
